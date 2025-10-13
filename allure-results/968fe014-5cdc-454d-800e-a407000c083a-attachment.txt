@@ -1,0 +1,5 @@
+
+Status Code DELETE: 200 (OK)
+Respons Body DELETE: {}
+
+Memverifikasi bahwa data sudah tidak ada...

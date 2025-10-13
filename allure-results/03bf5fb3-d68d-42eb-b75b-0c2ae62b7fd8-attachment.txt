@@ -1,0 +1,10 @@
+
+Status Code: 201 (Created)
+Respons Data:
+{
+    "title": "Latihan Sandra kedua",
+    "body": "Ini adalah konten postingan kedua.",
+    "userId": 1,
+    "id": 101
+}
+Postingan baru berhasil dibuat dengan ID: 101
