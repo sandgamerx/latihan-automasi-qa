@@ -8,14 +8,18 @@ from appium.options.android import UiAutomator2Options
 def driver():
     appium_options = UiAutomator2Options()
     appium_options.platform_name = "Android"
-    
-    # Ganti 'deviceName' menjadi alamat unik HP Anda
-    appium_options.udid = "RR8NA0BFQNW" # <-- PASTE KODE ANDA DI SINI
-    
-    appium_options.app_package = "com.google.android.calculator"
-    appium_options.app_activity = "com.android.calculator2.Calculator"
+    appium_options.udid = "RR8NA0BFQNW" 
 
-    print("\n--- Menghubungkan ke Perangkat Fisik Samsung A51 ---")
+    # --- Ganti ke Konfigurasi TikTok ---
+    appium_options.app_package = "com.ss.android.ugc.trill"
+    appium_options.app_activity = "com.ss.android.ugc.aweme.splash.SplashActivity"
+    # -----------------------------------
+    
+    appium_options.no_reset = True
+    appium_options.set_capability("unicodeKeyboard", True)
+    appium_options.set_capability("resetKeyboard", True)
+
+    print("\n--- Menghubungkan ke Perangkat Fisik (Aplikasi TikTok) ---")
     appium_driver = webdriver.Remote("http://localhost:4723", options=appium_options)
     
     yield appium_driver
