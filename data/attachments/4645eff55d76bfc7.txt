@@ -1,0 +1,6 @@
+
+--- Membuka Browser Chrome (Headless) ---
+
+--- Tes untuk user: 'performance_glitch_user' ---
+
+--- Menutup Browser Chrome ---

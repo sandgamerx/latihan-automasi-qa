@@ -1,0 +1,10 @@
+
+Status Code: 200 (OK)
+Respons Data:
+{
+    "id": 99,
+    "title": "Sandra update data",
+    "body": "Sandra was here untuk update",
+    "userId": 1
+}
+Verifikasi Judul Berhasil: 'Sandra update data'
