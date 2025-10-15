@@ -68,27 +68,34 @@ jobs:
 
   publish-allure-report:
     runs-on: ubuntu-latest
-    needs: test-web # Memastikan job ini hanya berjalan jika tes web selesai
+    needs: test-web # Pastikan ini menunggu job tes Anda selesai
     if: always() 
+
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+
     steps:
+      # Langkah 1: Download hasil tes mentah (allure-results)
       - name: Download Allure results
         uses: actions/download-artifact@v4
         with:
           name: allure-results
           path: allure-results
-          
+
+      # Langkah 2: Instal Allure CTL (Commandline Tool) menggunakan action resmi
+      - name: Setup Allure
+        uses: allure-framework/setup-allurectl@v1
+
+      # Langkah 3: Generate laporan Allure menggunakan perintah yang baru diinstal
       - name: Generate Allure Report
-        # Anda perlu menginstal Allure di runner ini juga
-        run: |
-          npm install -g allure-commandline
-          allure generate allure-results --clean -o allure-history
-      
-      - name: Publish Allure Report to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4 # <-- Action yang lebih terawat
+        run: allurectl report generate --report-dir allure-report ./allure-results
+
+      # Langkah 4: Publikasikan folder laporan ke branch gh-pages
+      - name: Deploy Allure Report to Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./allure-history # <-- Arahkan ke folder hasil
-          # --------------------------------
-          # Tambahkan user agar commit jelas
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+          # Pastikan publish_dir mengarah ke folder output dari langkah sebelumnya
+          publish_dir: ./allure-report
