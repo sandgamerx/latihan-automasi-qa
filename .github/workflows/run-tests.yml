@@ -69,7 +69,7 @@ jobs:
   publish-allure-report:
     runs-on: ubuntu-latest
     needs: test-web # Memastikan job ini hanya berjalan jika tes web selesai
-    if: success() || failure() # Jalankan meskipun tes gagal, agar laporan tetap dibuat
+    if: always() 
     steps:
       - name: Download Allure results
         uses: actions/download-artifact@v4
@@ -77,9 +77,14 @@ jobs:
           name: allure-results
           path: allure-results
           
+      # --- GANTI ACTION DI BAWAH INI ---
       - name: Publish Allure Report to GitHub Pages
-        uses: simple-actions/allure-report-publisher@main
+        uses: peaceiris/actions-gh-pages@v4 # <-- Action yang lebih terawat
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          allure_directory: allure-results
-          # Ini akan membuat laporan di repositori GitHub Anda
+          publish_dir: ./allure-history # <-- Arahkan ke folder hasil
+          # --------------------------------
+      
+      # Tambahkan langkah untuk generate report dari hasil mentah
+      - name: Generate Allure Report
+        run: allure generate allure-results --clean -o allure-history
