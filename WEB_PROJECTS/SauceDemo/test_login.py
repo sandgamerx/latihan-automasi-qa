@@ -9,7 +9,7 @@ from WEB_PROJECTS.SauceDemo.Pages.LoginPage import LoginPage
 test_data = [
     ("standard_user", "secret_sauce", "inventory.html"),
     # Ubah pesan di bawah ini agar tesnya gagal
-    ("locked_out_user", "secret_sauce", "PASTI AMBIL SCREENSHOT"), 
+    ("locked_out_user", "secret_sauce", "Sorry, this user has been locked out."), 
     ("problem_user", "secret_sauce", "inventory.html"),
     ("performance_glitch_user", "secret_sauce", "inventory.html")
 ]
