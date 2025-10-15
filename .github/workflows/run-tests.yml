@@ -77,14 +77,15 @@ jobs:
           name: allure-results
           path: allure-results
           
-      # --- GANTI ACTION DI BAWAH INI ---
+      - name: Generate Allure Report
+        # Anda perlu menginstal Allure di runner ini juga
+        run: |
+          npm install -g allure-commandline
+          allure generate allure-results --clean -o allure-history
+      
       - name: Publish Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4 # <-- Action yang lebih terawat
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./allure-history # <-- Arahkan ke folder hasil
           # --------------------------------
-      
-      # Tambahkan langkah untuk generate report dari hasil mentah
-      - name: Generate Allure Report
-        run: allure generate allure-results --clean -o allure-history
