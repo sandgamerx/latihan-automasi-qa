@@ -20,6 +20,10 @@ class TikTokHomePage:
         # self.like_button = (AppiumBy.ACCESSIBILITY_ID, "Suka")
         # ---------------------------------------------
 
+        # Tombol Cari (Search) - menggunakan Resource ID dari data Anda
+        self.search_button = (AppiumBy.ID, "com.ss.android.ugc.trill:id/i7n") 
+        # ---------------------------
+
     @allure.step("Menekan tombol Suka (Like)")
     def click_like(self):
         """Mencari dan menekan tombol Suka."""
@@ -36,3 +40,11 @@ class TikTokHomePage:
             print("Tombol Suka tidak ditemukan dalam waktu 10 detik. Lanjut scroll.")
         except Exception as e:
             print(f"Error tak terduga saat klik Like: {e}")
+    
+    @allure.step("Menekan tombol Cari (Search)")
+    def click_search(self):
+        """Menekan ikon Cari di bagian bawah atau atas layar."""
+        search_element = self.wait.until(
+            EC.element_to_be_clickable(self.search_button)
+        )
+        search_element.click()

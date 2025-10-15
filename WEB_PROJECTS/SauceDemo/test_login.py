@@ -2,7 +2,7 @@
 
 import time
 import pytest
-from LoginPage import LoginPage
+from WEB_PROJECTS.SauceDemo.Pages.LoginPage import LoginPage
 # Kita tidak butuh ProductsPage di sini lagi
 
 # --- Daftar Data Tes (tidak berubah) ---

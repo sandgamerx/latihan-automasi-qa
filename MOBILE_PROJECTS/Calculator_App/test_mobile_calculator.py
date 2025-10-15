@@ -2,7 +2,7 @@
 
 import pytest
 import allure
-from CalculatorPage import CalculatorPage
+from MOBILE_PROJECTS.Calculator_App.Pages.CalculatorPage import CalculatorPage
 import time
 
 # --- Siapkan Data Tes ---

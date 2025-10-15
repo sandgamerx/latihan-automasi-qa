@@ -3,8 +3,8 @@
 import pytest
 import allure
 import time
-from HomePage import HomePage
-from SearchPage import SearchPage
+from MOBILE_PROJECTS.Tokopedia_App.Pages.HomePage import HomePage
+from MOBILE_PROJECTS.Tokopedia_App.Pages.SearchPage import SearchPage
 
 @allure.title("Tes Pencarian Produk di Tokopedia")
 def test_product_search(driver):

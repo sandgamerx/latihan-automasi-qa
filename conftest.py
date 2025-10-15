@@ -1,28 +1,9 @@
-# conftest.py
+# conftest.py (di root Latihan_Automasi/)
+import sys
+import os
 
-import pytest
-from appium import webdriver
-from appium.options.android import UiAutomator2Options
+# Tambahkan root directory Anda ke Python path
+# Ini memungkinkan import seperti 'from MOBILE_PROJECTS.TikTok_App.Pages...'
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-@pytest.fixture(scope="session")
-def driver():
-    appium_options = UiAutomator2Options()
-    appium_options.platform_name = "Android"
-    appium_options.udid = "RR8NA0BFQNW" 
-
-    # --- Ganti ke Konfigurasi TikTok ---
-    appium_options.app_package = "com.ss.android.ugc.trill"
-    appium_options.app_activity = "com.ss.android.ugc.aweme.splash.SplashActivity"
-    # -----------------------------------
-    
-    appium_options.no_reset = True
-    appium_options.set_capability("unicodeKeyboard", True)
-    appium_options.set_capability("resetKeyboard", True)
-
-    print("\n--- Menghubungkan ke Perangkat Fisik (Aplikasi TikTok) ---")
-    appium_driver = webdriver.Remote("http://localhost:4723", options=appium_options)
-    
-    yield appium_driver
-    
-    print("\n--- Menutup koneksi ---")
-    appium_driver.quit()
+# Di sini Anda bisa menaruh fixture global (misalnya API driver, jika ada)

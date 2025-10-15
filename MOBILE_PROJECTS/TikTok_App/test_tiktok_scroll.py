@@ -3,7 +3,7 @@ import pytest
 import allure
 import time
 import random
-from TikTokHomePage import TikTokHomePage # Impor Page Object baru
+from MOBILE_PROJECTS.TikTok_App.Pages.TikTokHomePage import TikTokHomePage # Impor Page Object baru
 
 @allure.title("Tes Interaksi Berulang di TikTok")
 def test_tiktok_scroll_and_like(driver):
