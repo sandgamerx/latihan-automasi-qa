@@ -12,7 +12,7 @@ def pytest_addoption(parser):
         "--browser", action="store", default="chrome", help="Pilih browser: chrome atau firefox"
     )
 
-@pytest.fixture(scope="function")
+@pytest.fixture(scope="session")
 def driver(request): # <-- Minta 'request' di sini
     """
     Fixture ini sekarang bisa membaca opsi dari command line
