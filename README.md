@@ -56,16 +56,16 @@ Before running this project on your local machine, ensure you have installed all
 
 1. Clone the Repository
 
-&nbsp; &nbsp; &nbsp; Bash
+Bash
 
     git clone https://github.com/sandgamerx/latihan-automasi-qa.git
     cd latihan-automasi-qa
 
 2. Create and Activate a Virtual Environment (venv)
 
-&nbsp; &nbsp; &nbsp; This will isolate the project's Python libraries.
+This will isolate the project's Python libraries.
 
-  &nbsp; &nbsp; &nbsp; PowerShell
+PowerShell
 
     # Create the venv
     python -m venv .venv
@@ -78,27 +78,27 @@ Before running this project on your local machine, ensure you have installed all
 
 3. Install All Required Libraries
 
-&nbsp; &nbsp; &nbsp; Bash
+Bash
 
     pip install -r requirements.txt
 
 4. Running Specific Tests
 
-&nbsp; &nbsp; &nbsp; You can run tests for each module separately. Ensure you are in the root project folder (latihan-automasi-qa).
+You can run tests for each module separately. Ensure you are in the root project folder (latihan-automasi-qa).
 
-&nbsp; &nbsp; &nbsp; Running Web Tests (SauceDemo):
+Running Web Tests (SauceDemo):
 
-  &nbsp; &nbsp; &nbsp; Bash
+Bash
 
     pytest WEB_PROJECTS/SauceDemo/
   
-  &nbsp; &nbsp; &nbsp; Running API Tests:
+Running API Tests:
 
-  &nbsp; &nbsp; &nbsp; Bash
+Bash
 
     pytest API/
   
-  &nbsp; &nbsp; &nbsp; Running Mobile Tests (Example: TikTok):
+Running Mobile Tests (Example: TikTok):
 
   &nbsp; &nbsp; &nbsp; • Ensure the Appium Server is running in a separate terminal (appium).
 
@@ -106,7 +106,7 @@ Before running this project on your local machine, ensure you have installed all
 
  &nbsp; &nbsp; &nbsp;  • Update the conftest.py file inside the application's folder with your device UDID.
 
-  &nbsp; &nbsp; &nbsp; Bash
+Bash
 
     pytest MOBILE_PROJECTS/TikTok_App/
 
@@ -117,7 +117,7 @@ Allure provides a very detailed visualization of the test results.
 1. Run Tests and Collect Data
 Add the --alluredir flag when running pytest.
 
-&nbsp; &nbsp; &nbsp; Bash
+Bash
 
     # Example for all tests
     pytest --alluredir=allure-results
@@ -129,10 +129,11 @@ Add the --alluredir flag when running pytest.
 
 Use the allure commandline to serve the report from the collected data.
 
-&nbsp; &nbsp; &nbsp; Bash
+Bash
 
     allure serve allure-results
-    This will automatically open the report in your default browser.
+
+This will automatically open the report in your default browser.
 
 ☁️ CI/CD Integration with GitHub Actions
 
@@ -200,16 +201,16 @@ Sebelum menjalankan proyek ini di mesin lokal Anda, pastikan Anda telah menginst
 
 &nbsp; &nbsp; &nbsp; 1. Kloning Repositori
 
-&nbsp; &nbsp; &nbsp; Bash
+Bash
 
     git clone https://github.com/sandgamerx/latihan-automasi-qa.git
     cd latihan-automasi-qa
     
 2. Buat dan Aktifkan Lingkungan Virtual (venv)
 
-&nbsp; &nbsp; &nbsp; Ini akan mengisolasi library Python proyek Anda.
+Ini akan mengisolasi library Python proyek Anda.
 
-&nbsp; &nbsp; &nbsp; PowerShell
+PowerShell
 
     # Buat venv
     python -m venv .venv
@@ -222,27 +223,27 @@ Sebelum menjalankan proyek ini di mesin lokal Anda, pastikan Anda telah menginst
     
 3. Instal Semua Library yang Dibutuhkan
 
-&nbsp; &nbsp; &nbsp; Bash
+Bash
 
     pip install -r requirements.txt
     
 4. Menjalankan Tes Spesifik
 
-&nbsp; &nbsp; &nbsp; Anda dapat menjalankan tes untuk setiap modul secara terpisah. Pastikan Anda berada di root folder (latihan-automasi-qa).
+Anda dapat menjalankan tes untuk setiap modul secara terpisah. Pastikan Anda berada di root folder (latihan-automasi-qa).
 
-&nbsp; &nbsp; &nbsp; Menjalankan Tes Web (SauceDemo):
+Menjalankan Tes Web (SauceDemo):
 
-&nbsp; &nbsp; &nbsp; Bash
+Bash
 
     pytest WEB_PROJECTS/SauceDemo/
 
-&nbsp; &nbsp; &nbsp; Menjalankan Tes API:
+Menjalankan Tes API:
 
-&nbsp; &nbsp; &nbsp; Bash
+Bash
 
     pytest API/
 
-&nbsp; &nbsp; &nbsp; Menjalankan Tes Mobile (Contoh: TikTok):
+Menjalankan Tes Mobile (Contoh: TikTok):
 
 &nbsp; &nbsp; &nbsp; • Pastikan Appium Server berjalan di terminal terpisah (appium).
 
@@ -250,7 +251,7 @@ Sebelum menjalankan proyek ini di mesin lokal Anda, pastikan Anda telah menginst
 
 &nbsp; &nbsp; &nbsp; • Perbarui conftest.py di dalam folder aplikasi dengan UDID perangkat Anda.
 
-&nbsp; &nbsp; &nbsp; Bash
+Bash
 
     pytest MOBILE_PROJECTS/TikTok_App/
     
@@ -262,7 +263,7 @@ Laporan Allure memberikan visualisasi hasil tes yang sangat detail.
 
 Tambahkan flag --alluredir saat menjalankan pytest.
 
-&nbsp; &nbsp; &nbsp; Bash
+Bash
 
     # Contoh untuk semua tes
     pytest --alluredir=allure-results
@@ -274,10 +275,11 @@ Tambahkan flag --alluredir saat menjalankan pytest.
 
 Gunakan allure commandline untuk menyajikan laporan dari data yang terkumpul.
 
-&nbsp; &nbsp; &nbsp; Bash
+Bash
 
     allure serve allure-results
-    Ini akan secara otomatis membuka laporan di browser Anda.
+
+Ini akan secara otomatis membuka laporan di browser Anda.
 
 ☁️ Integrasi CI/CD dengan GitHub Actions
 
