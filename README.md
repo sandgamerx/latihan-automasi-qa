@@ -1,4 +1,5 @@
 Comprehensive QA Automation Practice (Web, API, Mobile)
+
 Welcome to my QA automation practice repository! This project is a collection of test automation frameworks covering the three main pillars of quality assurance: Web (Selenium), API (Requests), and Mobile (Appium). All tests are written in Python using the Pytest framework.
 
 This repository is also configured with GitHub Actions to run tests automatically (CI/CD) and publish test reports using Allure Report.
@@ -119,9 +120,10 @@ Online Reports: After the workflow completes, the latest Allure report is automa
 
 Thank you for visiting my learning project!
 
-===============================================================================================
+===================================================================
 
 Latihan Automasi QA Lengkap (Web, API, Mobile)
+
 Selamat datang di repositori latihan automasi QA saya! Proyek ini adalah kumpulan framework automasi pengujian yang mencakup tiga pilar utama: Web (Selenium), API (Requests), dan Mobile (Appium). Semua tes ditulis menggunakan Python dengan framework Pytest.
 
 Repositori ini juga dikonfigurasi dengan GitHub Actions untuk menjalankan tes secara otomatis (CI/CD) dan mempublikasikan laporan tes menggunakan Allure Report.
