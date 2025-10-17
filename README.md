@@ -4,6 +4,7 @@ Welcome to my QA automation practice repository! This project is a collection of
 
 This repository is also configured with GitHub Actions to run tests automatically (CI/CD) and publish test reports using Allure Report.
 
+
 🚀 Key Features
 
 • Web Automation: Utilizes Selenium to test the Sauce Demo e-commerce website.
@@ -20,50 +21,51 @@ This repository is also configured with GitHub Actions to run tests automaticall
 
 • Modular Project Structure: The code is organized into separate folders for each tested application for easy management.
 
+
 🛠️ Prerequisites (Environment Setup)
 
-• Before running this project on your local machine, ensure you have installed all the necessary software.
+Before running this project on your local machine, ensure you have installed all the necessary software.
 
 1. General Software:
 
-• Python: Version 3.9+.
+&nbsp; &nbsp; &nbsp; • Python: Version 3.9+.
 
-• Git: For cloning the repository.
+&nbsp; &nbsp; &nbsp; • Git: For cloning the repository.
 
-• Java JDK: Required by Allure Report. Version 11 or higher is recommended.
+&nbsp; &nbsp; &nbsp; • Java JDK: Required by Allure Report. Version 11 or higher is recommended.
 
-• Node.js & NPM: Required to install the Allure Commandline tool.
+&nbsp; &nbsp; &nbsp; • Node.js & NPM: Required to install the Allure Commandline tool.
 
 2. For Web Automation (Selenium):
 
-• Google Chrome: Or another supported browser.
+&nbsp; &nbsp; &nbsp; • Google Chrome: Or another supported browser.
 
-• ChromeDriver: Ensure its version matches your Google Chrome version.
+&nbsp; &nbsp; &nbsp; • ChromeDriver: Ensure its version matches your Google Chrome version.
 
 3. For Mobile Automation (Appium):
 
-• Android Studio: For the Android SDK and emulators.
+&nbsp; &nbsp; &nbsp; • Android Studio: For the Android SDK and emulators.
 
-• Appium Server: npm install -g appium
+&nbsp; &nbsp; &nbsp; • Appium Server: npm install -g appium
 
-• Appium Inspector: To inspect elements in mobile applications.
+&nbsp; &nbsp; &nbsp; • Appium Inspector: To inspect elements in mobile applications.
 
-• Appium Drivers: appium driver install uiautomator2
+&nbsp; &nbsp; &nbsp; • Appium Drivers: appium driver install uiautomator2
 
 🏃‍♂️ How to Run Tests Locally
 
 1. Clone the Repository
 
-Bash
+&nbsp; &nbsp; &nbsp; Bash
 
     git clone https://github.com/sandgamerx/latihan-automasi-qa.git
     cd latihan-automasi-qa
 
 2. Create and Activate a Virtual Environment (venv)
 
-This will isolate the project's Python libraries.
+&nbsp; &nbsp; &nbsp; This will isolate the project's Python libraries.
 
-  PowerShell
+  &nbsp; &nbsp; &nbsp; PowerShell
 
     # Create the venv
     python -m venv .venv
@@ -76,34 +78,35 @@ This will isolate the project's Python libraries.
 
 3. Install All Required Libraries
 
-Bash
+&nbsp; &nbsp; &nbsp; Bash
 
     pip install -r requirements.txt
 
 4. Running Specific Tests
-You can run tests for each module separately. Ensure you are in the root project folder (latihan-automasi-qa).
 
-Running Web Tests (SauceDemo):
+&nbsp; &nbsp; &nbsp; You can run tests for each module separately. Ensure you are in the root project folder (latihan-automasi-qa).
 
-  Bash
+&nbsp; &nbsp; &nbsp; Running Web Tests (SauceDemo):
+
+  &nbsp; &nbsp; &nbsp; Bash
 
     pytest WEB_PROJECTS/SauceDemo/
   
-  Running API Tests:
+  &nbsp; &nbsp; &nbsp; Running API Tests:
 
-  Bash
+  &nbsp; &nbsp; &nbsp; Bash
 
     pytest API/
   
-  Running Mobile Tests (Example: TikTok):
+  &nbsp; &nbsp; &nbsp; Running Mobile Tests (Example: TikTok):
 
-  • Ensure the Appium Server is running in a separate terminal (appium).
+  &nbsp; &nbsp; &nbsp; • Ensure the Appium Server is running in a separate terminal (appium).
 
-  • Ensure your physical device or emulator is connected.
+  &nbsp; &nbsp; &nbsp; • Ensure your physical device or emulator is connected.
 
-  • Update the conftest.py file inside the application's folder with your device UDID.
+ &nbsp; &nbsp; &nbsp;  • Update the conftest.py file inside the application's folder with your device UDID.
 
-  Bash
+  &nbsp; &nbsp; &nbsp; Bash
 
     pytest MOBILE_PROJECTS/TikTok_App/
 
@@ -114,7 +117,7 @@ Allure provides a very detailed visualization of the test results.
 1. Run Tests and Collect Data
 Add the --alluredir flag when running pytest.
 
-Bash
+&nbsp; &nbsp; &nbsp; Bash
 
     # Example for all tests
     pytest --alluredir=allure-results
@@ -123,9 +126,10 @@ Bash
     pytest WEB_PROJECTS/SauceDemo/ --alluredir=allure-results
 
 2. Serve the Report in a Browser
+
 Use the allure commandline to serve the report from the collected data.
 
-Bash
+&nbsp; &nbsp; &nbsp; Bash
 
     allure serve allure-results
     This will automatically open the report in your default browser.
@@ -168,44 +172,44 @@ Sebelum menjalankan proyek ini di mesin lokal Anda, pastikan Anda telah menginst
 
 1. Perangkat Lunak Umum:
 
-• Python: Versi 3.9+.
+&nbsp; &nbsp; &nbsp; • Python: Versi 3.9+.
 
-• Git: Untuk mengkloning repositori.
+&nbsp; &nbsp; &nbsp; • Git: Untuk mengkloning repositori.
 
-• Java JDK: Diperlukan oleh Allure Report. Versi 11 atau lebih tinggi direkomendasikan.
+&nbsp; &nbsp; &nbsp; • Java JDK: Diperlukan oleh Allure Report. Versi 11 atau lebih tinggi direkomendasikan.
 
-• Node.js & NPM: Diperlukan untuk menginstal Allure Commandline.
+&nbsp; &nbsp; &nbsp; • Node.js & NPM: Diperlukan untuk menginstal Allure Commandline.
 
 2. Untuk Automasi Web (Selenium):
 
-• Google Chrome: Atau browser lain yang didukung.
+&nbsp; &nbsp; &nbsp; • Google Chrome: Atau browser lain yang didukung.
 
-• ChromeDriver: Pastikan versinya sesuai dengan versi Google Chrome Anda.
+&nbsp; &nbsp; &nbsp; • ChromeDriver: Pastikan versinya sesuai dengan versi Google Chrome Anda.
 
 3. Untuk Automasi Mobile (Appium):
 
-• Android Studio: Untuk Android SDK dan emulator.
+&nbsp; &nbsp; &nbsp; • Android Studio: Untuk Android SDK dan emulator.
 
-• Appium Server: npm install -g appium
+&nbsp; &nbsp; &nbsp; • Appium Server: npm install -g appium
 
-• Appium Inspector: Untuk menginspeksi elemen di aplikasi mobile.
+&nbsp; &nbsp; &nbsp; • Appium Inspector: Untuk menginspeksi elemen di aplikasi mobile.
 
-• Appium Drivers: appium driver install uiautomator2
+&nbsp; &nbsp; &nbsp; • Appium Drivers: appium driver install uiautomator2
 
 🏃‍♂️ Cara Menjalankan Tes Secara Lokal
 
-1. Kloning Repositori
+&nbsp; &nbsp; &nbsp; 1. Kloning Repositori
 
-Bash
+&nbsp; &nbsp; &nbsp; Bash
 
     git clone https://github.com/sandgamerx/latihan-automasi-qa.git
     cd latihan-automasi-qa
     
 2. Buat dan Aktifkan Lingkungan Virtual (venv)
 
-Ini akan mengisolasi library Python proyek Anda.
+&nbsp; &nbsp; &nbsp; Ini akan mengisolasi library Python proyek Anda.
 
-PowerShell
+&nbsp; &nbsp; &nbsp; PowerShell
 
     # Buat venv
     python -m venv .venv
@@ -218,35 +222,35 @@ PowerShell
     
 3. Instal Semua Library yang Dibutuhkan
 
-Bash
+&nbsp; &nbsp; &nbsp; Bash
 
     pip install -r requirements.txt
     
 4. Menjalankan Tes Spesifik
 
-Anda dapat menjalankan tes untuk setiap modul secara terpisah. Pastikan Anda berada di root folder (latihan-automasi-qa).
+&nbsp; &nbsp; &nbsp; Anda dapat menjalankan tes untuk setiap modul secara terpisah. Pastikan Anda berada di root folder (latihan-automasi-qa).
 
-Menjalankan Tes Web (SauceDemo):
+&nbsp; &nbsp; &nbsp; Menjalankan Tes Web (SauceDemo):
 
-Bash
+&nbsp; &nbsp; &nbsp; Bash
 
     pytest WEB_PROJECTS/SauceDemo/
 
-Menjalankan Tes API:
+&nbsp; &nbsp; &nbsp; Menjalankan Tes API:
 
-Bash
+&nbsp; &nbsp; &nbsp; Bash
 
     pytest API/
 
-Menjalankan Tes Mobile (Contoh: TikTok):
+&nbsp; &nbsp; &nbsp; Menjalankan Tes Mobile (Contoh: TikTok):
 
-• Pastikan Appium Server berjalan di terminal terpisah (appium).
+&nbsp; &nbsp; &nbsp; • Pastikan Appium Server berjalan di terminal terpisah (appium).
 
-• Pastikan HP fisik atau emulator Anda terhubung.
+&nbsp; &nbsp; &nbsp; • Pastikan HP fisik atau emulator Anda terhubung.
 
-• Perbarui conftest.py di dalam folder aplikasi dengan UDID perangkat Anda.
+&nbsp; &nbsp; &nbsp; • Perbarui conftest.py di dalam folder aplikasi dengan UDID perangkat Anda.
 
-Bash
+&nbsp; &nbsp; &nbsp; Bash
 
     pytest MOBILE_PROJECTS/TikTok_App/
     
@@ -258,7 +262,7 @@ Laporan Allure memberikan visualisasi hasil tes yang sangat detail.
 
 Tambahkan flag --alluredir saat menjalankan pytest.
 
-Bash
+&nbsp; &nbsp; &nbsp; Bash
 
     # Contoh untuk semua tes
     pytest --alluredir=allure-results
@@ -270,7 +274,7 @@ Bash
 
 Gunakan allure commandline untuk menyajikan laporan dari data yang terkumpul.
 
-Bash
+&nbsp; &nbsp; &nbsp; Bash
 
     allure serve allure-results
     Ini akan secara otomatis membuka laporan di browser Anda.
